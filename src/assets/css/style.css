@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: grid;
+  place-content: center;
+  background: url('/public/img/weather-app.jpeg') center center / cover no-repeat fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main {
+  width: fit-content;
+  max-width: 90dvw;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(170, 170, 170, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+.main input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.main input:focus {
+  border-bottom-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+h2 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.clock {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.weather p:nth-child(1) {
+  margin: 1.5rem auto;
+  width: fit-content;
+  min-width: 250px;
+  height: 150px;
+  font-size: 2.5rem;
+  line-height: 150px;
+  border-radius: 12px;
+  background-color: rgba(8, 8, 8, 0.5);
+  backdrop-filter: blur(4px);
+  color: #fff;
+}
+
+.weather p:nth-child(2) {
+  font-size: 1.4rem;
+  color: #eaeaea;
+  text-transform: uppercase;
+}
+.loading{
+  width: 50px;
+  height: 50px;
+  border-top: 3px solid white;
+  border-right: 2px solid white;
+  margin: 1.5rem auto;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: #fff;
+  animation: loading ease-in-out infinite 2s;
+}
+@keyframes loading {
+  0%{
+    transform: rotate('0');
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.error{
+  position: absolute;
+  top: 10px;
+}
