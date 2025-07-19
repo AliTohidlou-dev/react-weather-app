@@ -82,7 +82,3 @@ h2 {
     transform: rotate(360deg);
   }
 }
-.error{
-  position: absolute;
-  top: 10px;
-}

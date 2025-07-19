@@ -37,7 +37,7 @@ const Weather = (props) => {
       ) : (
         <p>{data?.main?.temp}°C</p>
       )}
-      {isError && <p>{data} 🥲</p>}
+      {isError && <p>{isError} 🥲</p>}
       {data?.weather && <p>{data.weather[0].description}</p>}
     </div>
   );
