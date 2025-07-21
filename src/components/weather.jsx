@@ -1,14 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  requestToGetData,
-  getData,
-  getError,
-} from "../redux/weather/weather.action";
+import { requestToGetData,getData,getError } from "../redux/themes/weatherslice";
 const Weather = (props) => {
   const API = "bd4305d93d1faa7050c95451c6c74d55";
   const { city } = props;
-  const { isLoading, data, isError } = useSelector((state) => state.weather);
+  const { isLoading, data, isError } = useSelector((state) => state.weather);  
   const dispatch = useDispatch();
   useEffect(() => {
     if (city) {
